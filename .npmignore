@@ -31,6 +31,9 @@ __tests__/
 *.spec.tsx
 coverage/
 
+# Example project (not needed in published package)
+example/
+
 # Development dependencies
 node_modules/
 

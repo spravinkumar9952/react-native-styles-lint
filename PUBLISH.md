@@ -12,10 +12,10 @@
 
 ### 1. Check Package Name Availability
 
-First, check if the package name is available on npm:
+First, check if the scoped package name is available on npm:
 
 ```bash
-npm view eslint-plugin-react-native-styles-lint
+npm view @spravinkumar9952/react-native-styles-lint
 ```
 
 If it returns a 404, the name is available. If it returns package info, the name is taken and you'll need to choose a different name.
@@ -29,6 +29,7 @@ npm login
 ```
 
 You'll be prompted for:
+
 - Username
 - Password
 - Email
@@ -77,10 +78,12 @@ This creates a tarball and shows what will be published without actually publish
 
 ### 6. Publish to npm
 
-#### For First Time Publishing:
+#### For First Time Publishing (Scoped Package):
+
+Since this is a scoped package, you need to publish with public access:
 
 ```bash
-npm publish
+npm publish --access public
 ```
 
 #### For Updates (after version bump):
@@ -93,8 +96,8 @@ npm version minor  # for 0.1.0 -> 0.2.0
 # or
 npm version major  # for 0.1.0 -> 1.0.0
 
-# Then publish
-npm publish
+# Then publish (scoped packages need --access public)
+npm publish --access public
 ```
 
 ### 7. Verify Publication
@@ -102,55 +105,55 @@ npm publish
 Check that your package is published:
 
 ```bash
-npm view eslint-plugin-react-native-styles-lint
+npm view @spravinkumar9952/react-native-styles-lint
 ```
 
-Or visit: https://www.npmjs.com/package/eslint-plugin-react-native-styles-lint
+Or visit: https://www.npmjs.com/package/@spravinkumar9952/react-native-styles-lint
 
-## Publishing Scoped Packages (Optional)
+## Publishing Scoped Packages
 
-If you want to publish under your npm username scope:
+This package is already configured as a scoped package: `@spravinkumar9952/react-native-styles-lint`
 
-1. Update package name in `package.json`:
-   ```json
-   {
-     "name": "@yourusername/eslint-plugin-react-native-styles-lint"
-   }
-   ```
+When publishing scoped packages, you must use the `--access public` flag:
 
-2. Publish with public access:
-   ```bash
-   npm publish --access public
-   ```
+```bash
+npm publish --access public
+```
+
+This makes the package publicly accessible even though it's under your scope.
 
 ## Troubleshooting
 
 ### Package name already taken
+
 - Choose a different name or use a scoped package name
 
 ### Authentication errors
+
 - Run `npm login` again
 - Check if you have 2FA enabled and need to use an access token
 
 ### Build errors
+
 - Run `npm run build` manually to see errors
 - Ensure all dependencies are installed: `npm install`
 
 ### Permission errors
+
 - Make sure you're logged in: `npm whoami`
 - Verify you own the package name or use a scoped package
 
 ## After Publishing
 
 1. Install and test your published package:
+
    ```bash
-   npm install -D eslint-plugin-react-native-styles-lint
+   npm install -D @spravinkumar9952/react-native-styles-lint
    ```
 
 2. Update your README with installation instructions
 
 3. Consider adding badges to your README:
    ```markdown
-   [![npm version](https://badge.fury.io/js/eslint-plugin-react-native-styles-lint.svg)](https://badge.fury.io/js/eslint-plugin-react-native-styles-lint)
+   [![npm version](https://badge.fury.io/js/%40spravinkumar9952%2Freact-native-styles-lint.svg)](https://badge.fury.io/js/%40spravinkumar9952%2Freact-native-styles-lint)
    ```
-

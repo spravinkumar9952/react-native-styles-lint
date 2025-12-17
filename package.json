@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-react-native-styles-lint",
+  "name": "@spravinkumar9952/react-native-styles-lint",
   "version": "0.1.0",
   "description": "A linting tool for React Native styles",
   "main": "dist/index.js",
@@ -42,12 +42,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/spravinkumar9952/react-native-styles-lint.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/spravinkumar9952/react-native-styles-lint/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/spravinkumar9952/react-native-styles-lint#readme",
   "engines": {
     "node": ">=14.0.0"
   },

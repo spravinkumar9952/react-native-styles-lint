@@ -4,6 +4,7 @@
   "private": true,
   "description": "Example project to test react-native-styles-lint",
   "scripts": {
+    "postinstall": "node setup-plugin.js",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
@@ -17,6 +18,6 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.50.0",
-    "eslint-plugin-react-native-styles-lint": "file:.."
+    "@spravinkumar9952/react-native-styles-lint": "file:.."
   }
 }

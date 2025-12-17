@@ -1,20 +1,33 @@
-# react-native-styles-lint
+# @spravinkumar9952/react-native-styles-lint
 
 An ESLint plugin for linting React Native styles.
 
 ## Installation
 
 ```bash
-npm install --save-dev eslint-plugin-react-native-styles-lint
+npm install --save-dev @spravinkumar9952/react-native-styles-lint
 # or
-yarn add -D eslint-plugin-react-native-styles-lint
+yarn add -D @spravinkumar9952/react-native-styles-lint
 ```
 
 ## Usage
 
 Add the plugin to your ESLint configuration file (`.eslintrc.js`, `.eslintrc.json`, or `eslint.config.js`):
 
-### .eslintrc.js
+### .eslintrc.js (ESLint 8.x)
+
+Since the package doesn't follow the `eslint-plugin-*` naming convention, you have two options:
+
+**Option 1: Create a local plugin file (Recommended)**
+
+Create a file `eslint-plugin-react-native-styles-lint.js` in your project root:
+
+```javascript
+// eslint-plugin-react-native-styles-lint.js
+module.exports = require('@spravinkumar9952/react-native-styles-lint');
+```
+
+Then in your `.eslintrc.js`:
 
 ```javascript
 module.exports = {
@@ -30,7 +43,29 @@ module.exports = {
 };
 ```
 
+**Option 2: Use require() with plugins array (Alternative)**
+
+```javascript
+const reactNativeStylesLint = require('@spravinkumar9952/react-native-styles-lint');
+
+module.exports = {
+  plugins: ['react-native-styles-lint'],
+  rules: {
+    'react-native-styles-lint/no-restricted-styles': [
+      'error',
+      {
+        restrictedStyles: ['fontWeight', 'fontSize', 'color'],
+      },
+    ],
+  },
+  // Note: You'll need to manually register the plugin
+  // This approach may require additional configuration
+};
+```
+
 ### .eslintrc.json
+
+For JSON config files, create the local plugin file as shown in Option 1 above, then use:
 
 ```json
 {
@@ -49,7 +84,7 @@ module.exports = {
 ### ESLint Flat Config (eslint.config.js)
 
 ```javascript
-import reactNativeStylesLint from 'eslint-plugin-react-native-styles-lint';
+import reactNativeStylesLint from '@spravinkumar9952/react-native-styles-lint';
 
 export default [
   {
