@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const styles2 = () =>
-  StyleSheet.create({
+export function styles2() {
+  return StyleSheet.create({
     container: {
       flex: 1,
       justifyContent: 'center',
@@ -30,6 +30,7 @@ const styles2 = () =>
       padding: 10,
     },
   });
+}
 
-export { styles, styles2 };
+export { styles };
 export default ExampleComponent;

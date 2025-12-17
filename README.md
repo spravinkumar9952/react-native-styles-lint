@@ -112,14 +112,6 @@ export default [
 
 Click on a rule name to view its detailed documentation.
 
-## Features
-
-- ✅ Detect restricted style properties in `StyleSheet.create()`
-- ✅ Auto-fix to remove restricted properties
-- ✅ Support for nested style objects
-- ✅ Case-insensitive matching
-- ✅ Support for both camelCase and kebab-case property names
-
 ## Example Project
 
 An example project is included in the `example/` directory to demonstrate how to use this plugin.
