@@ -1,0 +1,70 @@
+{
+  "name": "eslint-plugin-react-native-styles-lint",
+  "version": "0.1.0",
+  "description": "A linting tool for React Native styles",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && npm run copy-js",
+    "copy-js": "node scripts/copy-js-files.js",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build",
+    "test": "jest",
+    "test:example": "npm run build && cd example && npm install && npm run lint",
+    "lint": "eslint src --ext .ts,.tsx,.js",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js}\"",
+    "prepublish": "npm run build && npm pack --dry-run"
+  },
+  "keywords": [
+    "react-native",
+    "styles",
+    "lint",
+    "linter",
+    "stylelint",
+    "css",
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "https://github.com/spravinkumar9952",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0",
+    "react-native": ">=0.60.0"
+  },
+  "dependencies": {}
+}
