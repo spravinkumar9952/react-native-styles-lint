@@ -105,32 +105,12 @@ export default [
 
 ## Rules
 
-### `no-restricted-styles`
+| Rule                                                                             | Description                                                                                   | Auto-fixable |
+| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------ |
+| [`no-restricted-styles`](./docs/rules/no-restricted-styles.md)                   | Detect and remove restricted style properties in React Native `StyleSheet.create()`           | ✅ Yes       |
+| [`no-export-stylesheet-function`](./docs/rules/no-export-stylesheet-function.md) | Prevent exporting functions or objects that create StyleSheet objects (to keep linting local) | ❌ No        |
 
-Detects and removes restricted style properties in React Native `StyleSheet.create()`.
-
-**Options:**
-
-- `restrictedStyles` (array of strings): Array of style property names that should be restricted. Supports both camelCase and kebab-case (e.g., `fontWeight` or `font-weight`).
-
-**Example:**
-
-```javascript
-// ❌ Error: Restricted style property "fontWeight" is not allowed.
-const styles = StyleSheet.create({
-  container: {
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-});
-
-// ✅ No errors
-const styles = StyleSheet.create({
-  container: {
-    padding: 10,
-  },
-});
-```
+Click on a rule name to view its detailed documentation.
 
 ## Features
 

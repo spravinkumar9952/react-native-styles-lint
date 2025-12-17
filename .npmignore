@@ -42,10 +42,10 @@ node_modules/
 .gitlab-ci.yml
 .travis.yml
 
-# Documentation (keep README.md)
-docs/
+# Documentation (keep README.md and docs)
 *.md
 !README.md
+!docs/**/*.md
 
 # Misc
 .env*

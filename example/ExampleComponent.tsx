@@ -19,4 +19,17 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 });
+
+const styles2 = () =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'blue',
+      padding: 10,
+    },
+  });
+
+export { styles, styles2 };
 export default ExampleComponent;

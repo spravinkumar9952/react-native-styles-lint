@@ -7,6 +7,9 @@
 // @ts-ignore - ESLint rules are in JS format
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const noRestrictedStyles = require('./linters/no-restricted-styles');
+// @ts-ignore - ESLint rules are in JS format
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const noExportStylesheetFunction = require('./linters/no-export-stylesheet-function');
 
 /**
  * ESLint plugin configuration
@@ -14,10 +17,10 @@ const noRestrictedStyles = require('./linters/no-restricted-styles');
 const plugin = {
   rules: {
     'no-restricted-styles': noRestrictedStyles,
+    'no-export-stylesheet-function': noExportStylesheetFunction,
   },
 };
 
 // Export as CommonJS for ESLint compatibility
 // @ts-ignore - CommonJS export for ESLint compatibility
 module.exports = plugin;
-
