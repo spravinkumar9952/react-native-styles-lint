@@ -1,6 +1,6 @@
 {
   "name": "@spravinkumar9952/react-native-styles-lint",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A linting tool for React Native styles",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
