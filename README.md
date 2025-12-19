@@ -109,6 +109,7 @@ export default [
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------ |
 | [`no-restricted-styles`](./docs/rules/no-restricted-styles.md)                   | Detect and remove restricted style properties in React Native `StyleSheet.create()`           | ✅ Yes       |
 | [`no-export-stylesheet-function`](./docs/rules/no-export-stylesheet-function.md) | Prevent exporting functions or objects that create StyleSheet objects (to keep linting local) | ❌ No        |
+| [`no-unused-styles`](./docs/rules/no-unused-styles.md)                           | Detect unused styles in React Native `StyleSheet.create()`                                    | ✅ Yes       |
 
 Click on a rule name to view its detailed documentation.
 

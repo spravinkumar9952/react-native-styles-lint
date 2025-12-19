@@ -27,6 +27,7 @@ module.exports = {
       },
     ],
     'react-native-styles-lint/no-export-stylesheet-function': 'error',
+    'react-native-styles-lint/no-unused-styles': 'error',
     // Disable some rules that aren't relevant for this example
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',

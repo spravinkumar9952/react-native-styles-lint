@@ -5,7 +5,8 @@ This directory contains detailed documentation for each ESLint rule provided by 
 ## Available Rules
 
 - [`no-restricted-styles`](./rules/no-restricted-styles.md) - Detect and remove restricted style properties in React Native `StyleSheet.create()`
-- [`no-export-stylesheet-function`](./rules/no-export-stylesheet-function.md) - Prevent exporting functions that create StyleSheet objects (to keep linting local)
+- [`no-export-stylesheet-function`](./rules/no-export-stylesheet-function.md) - Prevent exporting functions or objects that create StyleSheet objects (to keep linting local)
+- [`no-unused-styles`](./rules/no-unused-styles.md) - Detect unused styles in React Native `StyleSheet.create()`
 
 ## Contributing
 

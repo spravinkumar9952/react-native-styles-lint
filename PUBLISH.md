@@ -100,6 +100,76 @@ npm version major  # for 0.1.0 -> 1.0.0
 npm publish --access public
 ```
 
+#### For Pre-Releases (Alpha, Beta, RC):
+
+Pre-releases allow you to test your package before making it available to everyone. They won't be installed by default when someone runs `npm install`.
+
+**Publish an Alpha version:**
+
+```bash
+# Create alpha version (e.g., 0.1.3-alpha.1)
+npm version prerelease --preid=alpha
+
+# Publish with alpha tag
+npm publish --access public --tag alpha
+```
+
+**Publish a Beta version:**
+
+```bash
+# Create beta version (e.g., 0.1.3-beta.1)
+npm version prerelease --preid=beta
+
+# Publish with beta tag
+npm publish --access public --tag beta
+```
+
+**Publish a Release Candidate (RC):**
+
+```bash
+# Create RC version (e.g., 0.1.3-rc.1)
+npm version prerelease --preid=rc
+
+# Publish with rc tag
+npm publish --access public --tag rc
+```
+
+**Installing pre-release versions:**
+
+Users can install pre-release versions explicitly:
+
+```bash
+# Install alpha version
+npm install -D @spravinkumar9952/react-native-styles-lint@alpha
+
+# Install beta version
+npm install -D @spravinkumar9952/react-native-styles-lint@beta
+
+# Install RC version
+npm install -D @spravinkumar9952/react-native-styles-lint@rc
+
+# Install specific pre-release version
+npm install -D @spravinkumar9952/react-native-styles-lint@0.1.3-alpha.1
+```
+
+**Promoting pre-release to stable:**
+
+When you're ready to release the stable version:
+
+```bash
+# If current version is 0.1.3-alpha.1, this will make it 0.1.3
+npm version patch
+
+# Publish as latest (stable)
+npm publish --access public
+```
+
+**Note:** Pre-releases are useful for:
+- Testing new features before general release
+- Getting feedback from beta testers
+- Ensuring stability before public release
+- Allowing early adopters to try new features
+
 ### 7. Verify Publication
 
 Check that your package is published:
